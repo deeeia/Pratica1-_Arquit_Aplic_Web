@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lista de Bancos</title>
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <br/><br/><br/>
+      <h2>Bancos do Brasil</h2>
+      <br/>
+      <table class="table-striped table table-hover table-responsive-xl"> 
+        <thead class="thead-dark">
+          <tr>
+            <h3><th scope="col">COMPE</th>
+            <th scope="col">ShortName</th>
+            <th scope="col">Document</th>
+            <th scope="col">Type</th>
+            <th scope="col">URL</th></h3>
+          </tr>
+        </thead>
+        <tbody class="table-striped">
+      <% if (login.length > 0) { %>
+          <% for(var i = 0; i < login.length; i++) {%> 
+            </tr>
+              <th scope="row"><%= login[i].COMPE %></th>
+              <td><h3 ><%= login[i].ShortName %></h3></td>
+              <td><h5 ><%= login[i].Document %></h5></td>
+              <td><h5 ><%= login[i].Type %></h5></td>
+              <td><h5 ><%= login[i].Url %></h5></td>
+            </tr>
+          <% } %>
+        
+      <% } %>
+    </div>
+  </body>
+</html>
